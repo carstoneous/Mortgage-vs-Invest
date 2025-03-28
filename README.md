@@ -1,47 +1,47 @@
-# Mortgage vs. Investment Visualization
-
-This project provides an interactive visualization that explains why it may be better to invest extra cash rather than paying off a low-interest mortgage early. The page walks through a step-by-step comparison of two financial paths.
-
-## Overview
-
-The visualization compares two homeowners with identical mortgages who take different approaches with their extra monthly cash:
-- Person A: Uses extra money to pay off their mortgage early
-- Person B: Makes minimum mortgage payments and invests the difference
-
-Through interactive charts and examples, the page demonstrates how investing can potentially lead to greater long-term wealth when mortgage interest rates are lower than investment returns.
-
-## Key Features
-
-- Step-by-step scrolling story format
-- Interactive charts showing the progression of both scenarios
-- Comparison of net worth after 15 years
-- Interactive simulation tool allowing users to adjust mortgage rates and investment returns
-- Mobile-responsive design
-
-## Technical Implementation
-
-The project is built with plain HTML, CSS, and JavaScript:
-
-- **HTML5**: Semantic structure for content organization
-- **CSS3**: Responsive styling and animations
-- **JavaScript**: Financial calculations and interactive elements
-- **Chart.js**: Data visualization library for creating the charts
-
-## How to Use
-
-1. Open `index.html` in a modern web browser
-2. Scroll through the page to follow the step-by-step explanation
-3. Use the interactive simulation at the end to test different interest rate and investment return scenarios
-
-## Financial Assumptions
-
-- House Value: CHF 700,000
-- Mortgage Amount: CHF 500,000
-- Default Mortgage Interest Rate: 1.5%
-- Default Investment Return: 6% (historical stock market average)
-- Monthly Extra Payment/Investment: CHF 2,000
-- Time Period: 15 years
-
-## Browser Compatibility
-
-This visualization works best in modern browsers (Chrome, Firefox, Safari, Edge). 
+Mortgage vs. Investment Visualizer
+!Financial Chart Visualization !Interactive Calculator !Personal Finance
+💰 Should you pay off your mortgage or invest the difference?
+Discover how this seemingly simple financial decision could potentially make (or cost) you hundreds of thousands of dollars over time. This interactive visualization helps you explore which strategy builds more wealth in the long run.
+✨ Features
+Interactive Comparison: See side-by-side outcomes of both financial strategies
+Dynamic Charts: Visualize how your net worth grows over time with each approach
+Custom Simulator: Adjust interest rates and investment returns to match your situation
+Real Numbers: Based on actual financial calculations and amortization formulas
+🚀 Quick Start
+Clone this repo
+Open index.html in your browser
+Scroll through the guided explanation
+Use the simulator at the bottom to test your own scenarios
+No build process or dependencies required - it's all vanilla JavaScript, HTML, and CSS!
+🧮 The Math Behind It
+This tool compares two financial paths:
+Path A: Pay Off Early
+Make extra mortgage payments
+Build home equity faster
+Save on interest costs
+Invest what's left after the mortgage is paid off
+Path B: Invest Instead
+Make minimum mortgage payments
+Invest the difference each month
+Let compound growth work its magic
+Balance mortgage debt against investment growth
+The winner depends on the spread between your mortgage interest rate and your investment returns.
+💡 Key Insights
+When investment returns exceed mortgage rates by a significant margin, investing often wins
+The longer your time horizon, the more investing tends to outperform
+Being debt-free provides non-financial benefits that are harder to quantify
+Your personal risk tolerance should influence your decision
+📊 Example Results
+| Strategy | After 15 Years | Details |
+|----------|----------------|---------|
+| Pay Off Early | CHF 550,000 | Debt-free home + smaller investments |
+| Invest Instead | CHF 850,000 | Larger investment portfolio + remaining mortgage |
+🔧 Technical Details
+Vanilla JavaScript with Chart.js for visualizations
+Responsive design works on desktop and mobile
+No external dependencies beyond Chart.js
+Clean, commented code for easy customization
+📝 License
+MIT License - Feel free to use, modify, and share!
+🤝 Contribute
+Found a bug or have an idea? Contributions are welcome! Open an issue or submit a pull request
