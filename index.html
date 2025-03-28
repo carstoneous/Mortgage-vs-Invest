@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage vs. Investment: The Smart Money Choice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="intro-banner">
+        <div class="intro-content">
+            <h1>Mortgage vs. Investment: The Money Dilemma</h1>
+            <p class="tagline">Should you pay off your mortgage early or invest the difference?</p>
+            <p>Discover how a simple financial decision could potentially make (or cost) you hundreds of thousands of francs over time. Explore our interactive visualization to uncover which strategy builds more wealth in the long run, then test different scenarios yourself in the simulation below.</p>
+            <div class="intro-buttons">
+                <button class="intro-button" onclick="document.getElementById('step1').scrollIntoView({behavior: 'smooth'})">Start Exploring</button>
+                <button class="intro-button secondary" onclick="document.getElementById('step8').scrollIntoView({behavior: 'smooth'})">Jump to Simulation</button>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="step" id="step1">
+            <div class="content">
+                <h1>Should you pay off your mortgage early?</h1>
+                <p>Many people dream of being mortgage-free. But is rushing to pay it off always the smartest move?</p>
+                <div class="visual">
+                    <div class="scenario">
+                        <div class="symbol">
+                            <i class="fas fa-home fa-4x"></i>
+                        </div>
+                        <p>Pay off mortgage early</p>
+                    </div>
+                    <div class="scenario">
+                        <div class="symbol">
+                            <i class="fas fa-chart-line fa-4x"></i>
+                        </div>
+                        <p>Invest the extra money</p>
+                    </div>
+                </div>
+                <div class="nav-hint">Scroll down to continue</div>
+            </div>
+        </div>
+
+        <div class="step" id="step2">
+            <div class="content">
+                <h2>Let's compare two homeowners.</h2>
+                <p>Both have a CHF 500,000 mortgage at 1.5% interest with a 30-year term. Each makes the required monthly mortgage payment. They also each have an <strong>additional</strong> CHF 2,000/month in spare cash.</p>
+                
+                <div class="payment-explanation">
+                    <h3>Understanding the Payments</h3>
+                    <ul>
+                        <li><strong>Regular mortgage payment:</strong> Both homeowners make the standard monthly payment required for a 30-year mortgage.</li>
+                        <li><strong>Extra CHF 2,000/month:</strong> This is additional money that can either go toward the mortgage or investments.</li>
+                        <li><strong>Over 15 years:</strong> The extra payments (CHF 2,000 × 12 × 15 = CHF 360,000) don't cover the entire mortgage, but they significantly accelerate the payoff due to reduced interest.</li>
+                    </ul>
+                </div>
+                
+                <div class="characters">
+                    <div class="character">
+                        <div class="avatar">A</div>
+                        <h3>Person A</h3>
+                        <p>Uses extra CHF 2,000/month to pay down mortgage faster</p>
+                        <div class="character-detail">
+                            <p><i class="fas fa-money-bill-wave"></i> Regular mortgage payment + CHF 2,000 extra</p>
+                            <p><i class="fas fa-calendar-alt"></i> Pays off mortgage years earlier</p>
+                        </div>
+                    </div>
+                    <div class="character">
+                        <div class="avatar">B</div>
+                        <h3>Person B</h3>
+                        <p>Invests extra CHF 2,000/month in the market</p>
+                        <div class="character-detail">
+                            <p><i class="fas fa-money-bill-wave"></i> Only regular mortgage payment</p>
+                            <p><i class="fas fa-chart-line"></i> Grows investment portfolio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step3">
+            <div class="content">
+                <h2>Path A: Paying off the mortgage</h2>
+                <p>Person A makes extra payments toward their mortgage. This approach significantly reduces the time needed to pay off the loan. After approximately 12 years, it's fully paid off!</p>
+                
+                <div class="info-box">
+                    <h3>How Extra Payments Help</h3>
+                    <p>When you make extra payments on your mortgage:</p>
+                    <ul>
+                        <li>The extra amount goes directly to reducing the principal</li>
+                        <li>Less principal means less interest accrues each month</li>
+                        <li>Each subsequent payment becomes more effective at reducing the principal</li>
+                        <li>This creates an accelerating effect that pays off the mortgage much faster than 30 years</li>
+                    </ul>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="mortgageChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step4">
+            <div class="content">
+                <h2>Path B: Investing instead</h2>
+                <p>They stick to regular mortgage payments and invest the CHF 2,000/month. Let's assume a 6% annual return (stock market average).</p>
+                <div class="chart-container">
+                    <canvas id="investmentChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step5">
+            <div class="content">
+                <h2>15 years later...</h2>
+                <p>Who's better off? Let's compare net worth.</p>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Path A: Pay Off Early</th>
+                            <th>Path B: Invest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mortgage Balance</td>
+                            <td>CHF 0</td>
+                            <td>CHF 250,000</td>
+                        </tr>
+                        <tr>
+                            <td>Investment Portfolio</td>
+                            <td>CHF 50,000</td>
+                            <td>CHF 600,000</td>
+                        </tr>
+                        <tr>
+                            <td>Net Worth (House + Inv - Debt)</td>
+                            <td>CHF 550,000</td>
+                            <td>CHF 850,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="chart-container">
+                    <canvas id="netWorthChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step6">
+            <div class="content">
+                <h2>The Math Behind It</h2>
+                <p>When your mortgage interest rate is lower than your investment return, your money grows faster outside your house.</p>
+                
+                <div class="chart-container">
+                    <canvas id="rateComparisonChart"></canvas>
+                </div>
+                
+                <div class="formula">
+                    <p>Investment Growth: CHF 2,000 × [(1 + 0.06/12)<sup>12×15</sup> - 1] ÷ (0.06/12) ≈ CHF 600,000</p>
+                    <p>Mortgage Interest Saved: CHF 2,000 × 1.5% × 15 years ≈ CHF 50,000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step7">
+            <div class="content">
+                <h2>What you should consider</h2>
+                <div class="caveats-compact">
+                    <div class="caveat-grid">
+                        <div class="caveat-item">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                            <h3>Investment returns vary</h3>
+                            <p>Past performance doesn't guarantee future results. Markets can be volatile in the short term.</p>
+                        </div>
+                        <div class="caveat-item">
+                            <i class="fas fa-balance-scale fa-2x"></i>
+                            <h3>Risk vs. guaranteed return</h3>
+                            <p>Paying off your mortgage offers a guaranteed return, while investing comes with varying levels of risk.</p>
+                        </div>
+                        <div class="caveat-item">
+                            <i class="fas fa-hand-holding-usd fa-2x"></i>
+                            <h3>Liquidity & peace of mind</h3>
+                            <p>Investments offer better accessibility than home equity. However, being debt-free provides significant psychological benefits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step" id="step8">
+            <div class="content">
+                <h2>Test it yourself: Try different rates</h2>
+                <p>Adjust the sliders below to see how different mortgage rates and investment returns affect the long-term comparison.</p>
+
+                <div class="simulation-container">
+                    <div class="controls">
+                        <div class="slider-container">
+                            <label for="mortgageRate">Mortgage Interest Rate: <span id="mortgageRateValue">1.5</span>%</label>
+                            <input type="range" id="mortgageRate" min="0.5" max="4.0" step="0.1" value="1.5">
+                        </div>
+                        <div class="slider-container">
+                            <label for="investmentReturn">Investment Return: <span id="investmentReturnValue">6.0</span>%</label>
+                            <input type="range" id="investmentReturn" min="2" max="10" step="0.5" value="6.0">
+                        </div>
+                        <button id="runSimulation">Run Simulation</button>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="simulationChart"></canvas>
+                    </div>
+                    
+                    <div id="simulationSummary" class="simulation-summary"></div>
+                </div>
+
+                <div class="conclusion">
+                    <h3>Final Thoughts</h3>
+                    <div class="conclusion-points">
+                        <div class="conclusion-point">
+                            <i class="fas fa-balance-scale fa-2x"></i>
+                            <h3>Balance Risk and Return</h3>
+                            <p>Weigh the guaranteed return of paying off debt against potential investment returns.</p>
+                        </div>
+                        <div class="conclusion-point">
+                            <i class="fas fa-coins fa-2x"></i>
+                            <h3>Opportunity Cost</h3>
+                            <p>Consider what you might gain by putting your money to work elsewhere.</p>
+                        </div>
+                        <div class="conclusion-point">
+                            <i class="fas fa-heart fa-2x"></i>
+                            <h3>Personal Comfort</h3>
+                            <p>Your risk tolerance and peace of mind are also important factors in your decision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html> 
