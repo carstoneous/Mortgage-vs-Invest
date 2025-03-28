@@ -1,6 +1,14 @@
 # 🏡 Mortgage vs. Investment Visualizer
 
-![Financial Chart Visualization](#) ![Interactive Calculator](#) ![Personal Finance](#)
+**Financial Chart Visualization • Interactive Calculator • Personal Finance**
+
+## 💻 Live Demo
+
+👉 [View the Demo]([https://carstoneous.github.io/Mortgage-vs-Invest/])
+
+> _Replace the link above with your deployed project URL._
+
+---
 
 ## 💰 Should You Pay Off Your Mortgage or Invest the Difference?
 
