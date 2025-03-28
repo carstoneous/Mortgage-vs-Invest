@@ -4,7 +4,7 @@
 
 ## 💻 Live Demo
 
-👉 [View the Demo]([https://carstoneous.github.io/Mortgage-vs-Invest/])
+👉 [View the Demo](https://carstoneous.github.io/Mortgage-vs-Invest/)
 
 > _Replace the link above with your deployed project URL._
 
